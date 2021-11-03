@@ -1,0 +1,960 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: Akti;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: Akti;
+  src: url(../fonts/AktivGroteskCorp-Regular.ttf);
+}
+header {
+  width: 100%;
+  position: absolute;
+  height: 10vh;
+}
+header .navbar {
+  z-index: 2;
+  margin: -2% -5%;
+}
+header .navbar img {
+  width: 50%;
+}
+header .navbar .nav {
+  display: none;
+}
+header .navbar .nav li a {
+  color: #262626;
+  font-size: 25px;
+}
+
+.banner {
+  width: 100%;
+}
+.banner .banner_image img {
+  width: 100%;
+  height: 52vh;
+}
+.banner .banner_image .banner_text {
+  position: absolute;
+  top: 17%;
+  left: 16%;
+  z-index: 2;
+}
+.banner .banner_image .banner_text h1 {
+  font-size: 22px;
+}
+.banner .banner_image .banner_text h1 span {
+  display: block;
+}
+.banner .overlay {
+  position: absolute;
+  top: 0%;
+  z-index: 1;
+}
+.banner .overlay img {
+  width: 100%;
+  height: 52vh;
+}
+.banner .butterfly_image {
+  position: absolute;
+  top: 36%;
+  left: 29%;
+  z-index: 2;
+  width: 56%;
+}
+.banner .butterfly_image img {
+  width: 100%;
+}
+
+.about_us {
+  margin-top: 40%;
+}
+.about_us .col-lg-6 {
+  position: relative;
+}
+.about_us .col-lg-6 .allmytext {
+  text-align: center;
+  padding-left: 0%;
+}
+.about_us .col-lg-6 .allmytext h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.about_us .col-lg-6 .allmytext .mytext h5 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: lighter;
+}
+.about_us .col-lg-6 .allmytext .mytext p {
+  font-size: 20px;
+  line-height: 1.8;
+  padding-bottom: 60px;
+}
+.about_us .col-lg-6 .allmytext .mytext p span {
+  display: block;
+}
+.about_us .col-lg-6 img {
+  position: absolute;
+  margin-top: 4%;
+  width: 90%;
+  height: 90%;
+  left: 9%;
+}
+
+.our_values {
+  background-color: #E8DFCE;
+  height: 90vh;
+}
+.our_values h2 {
+  padding-top: 3%;
+  font-size: 50px;
+  padding-left: 5%;
+  margin-bottom: 3%;
+  font-weight: 350;
+}
+.our_values p {
+  font-size: 16px;
+  padding: 0 5px;
+  text-align: center;
+}
+.our_values .allcards {
+  background-color: #E8DFCE;
+  margin-top: 5%;
+}
+.our_values .allcards .col-lg-3 .card {
+  background-color: #E8DFCE;
+  border: none;
+}
+.our_values .allcards .col-lg-3 .card .img-top {
+  margin: 0 auto;
+}
+.our_values .allcards .col-lg-3 .card .img-top img {
+  width: 100%;
+}
+.our_values .allcards .col-lg-3 .card .card-body {
+  text-align: center;
+}
+.our_values .allcards .col-lg-3 .card .card-body h4 {
+  font-size: 25px;
+  padding-bottom: 15px;
+  font-weight: 350;
+}
+.our_values .allcards .col-lg-3 .card .card-body p {
+  font-size: 16px;
+}
+.our_values .allcards .col-lg-3 .card .card-body p span {
+  display: block;
+}
+.our_values .allcards .Honesty, .our_values .allcards .Value {
+  margin-top: 10%;
+}
+
+.Debut_team {
+  margin: 0 7%;
+  padding-top: 259%;
+  position: relative;
+  text-align: center;
+}
+.Debut_team .mytext1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 7%;
+  margin-top: 8%;
+}
+.Debut_team .mytext1 h2 {
+  font-size: 45px;
+  margin-bottom: 2%;
+  margin-left: -8%;
+}
+.Debut_team .mytext1 button {
+  position: absolute;
+  background-color: #262626;
+  color: #E8DFCE;
+  height: 50px;
+  width: 170px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  top: 100%;
+  left: 17%;
+  margin-bottom: 30px;
+}
+.Debut_team p {
+  margin-bottom: 5%;
+}
+.Debut_team .row .col-lg-4 .card {
+  border: none;
+  margin-bottom: 10%;
+}
+.Debut_team .row .col-lg-4 .card h6 {
+  font-size: 20px;
+  line-height: 2.1;
+}
+.Debut_team .row .col-lg-4 .card p {
+  line-height: 1.4;
+  padding-bottom: 10px;
+}
+.Debut_team .row .col-lg-4 .card img {
+  width: 90%;
+}
+.Debut_team .row .col-lg-4 .card .images {
+  margin-top: 43px;
+}
+.Debut_team .row .col-lg-4 .card .img1 {
+  height: 218px;
+}
+
+.portfolio {
+  text-align: center;
+}
+.portfolio h2 {
+  font-size: 45px;
+  padding-top: 20%;
+  line-height: 3;
+}
+.portfolio p {
+  font-size: 16px;
+}
+.portfolio .row .col-lg-6 {
+  position: relative;
+}
+.portfolio .row .col-lg-6 .mytext2 {
+  padding-left: 0%;
+  margin-top: 13%;
+}
+.portfolio .row .col-lg-6 .mytext2 h4 {
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+.portfolio .row .col-lg-6 .mytext2 p {
+  font-size: 16px;
+  line-height: 2;
+  padding-bottom: 20px;
+}
+.portfolio .row .col-lg-6 .mytext2 p span {
+  display: block;
+}
+.portfolio .row .col-lg-6 img {
+  position: absolute;
+  right: -1%;
+  width: 104%;
+}
+
+.get_in_touch {
+  height: 40vh;
+  margin-top: 121%;
+  position: relative;
+}
+.get_in_touch .row .mytext {
+  padding-left: 5%;
+  position: absolute;
+  top: 40%;
+}
+.get_in_touch .row .mytext h2 {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.get_in_touch .row .mytext p {
+  font-size: 17px;
+  line-height: 2;
+}
+.get_in_touch .row .mytext p span {
+  display: block;
+}
+.get_in_touch .row .mytext button {
+  margin-top: 10%;
+  background-color: #262626;
+  color: #E8DFCE;
+  height: 50px;
+  width: 170px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.get_in_touch .row .image2 {
+  position: absolute;
+  top: 10%;
+  height: 90%;
+}
+.get_in_touch .row img {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    position: absolute;
+    height: 10vh;
+  }
+  header .navbar {
+    z-index: 2;
+    margin: 0% 3%;
+  }
+  header .navbar img {
+    width: 80%;
+  }
+  header .navbar .nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  header .navbar .nav li a {
+    color: #262626;
+    font-size: 25px;
+  }
+
+  .banner {
+    height: 80vh;
+  }
+  .banner .banner_image img {
+    width: 100%;
+  }
+  .banner .banner_image .banner_text {
+    position: absolute;
+    top: 16%;
+    left: 23%;
+    z-index: 2;
+  }
+  .banner .banner_image .banner_text h1 {
+    font-size: 48px;
+  }
+  .banner .banner_image .banner_text h1 span {
+    display: block;
+  }
+  .banner .overlay {
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+  }
+  .banner .overlay img {
+    width: 100%;
+  }
+  .banner .butterfly_image {
+    position: absolute;
+    top: 36%;
+    left: 35%;
+    z-index: 2;
+  }
+  .banner .butterfly_image img {
+    width: 75%;
+  }
+
+  .about_us {
+    width: 98%;
+    margin-top: 0%;
+  }
+  .about_us .col-lg-6 {
+    position: relative;
+  }
+  .about_us .col-lg-6 .allmytext {
+    text-align: left;
+    padding-left: 13%;
+  }
+  .about_us .col-lg-6 .allmytext h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .about_us .col-lg-6 .allmytext .mytext h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+  }
+  .about_us .col-lg-6 .allmytext .mytext p {
+    font-size: 22px;
+    line-height: 1.8;
+    padding-bottom: 60px;
+  }
+  .about_us .col-lg-6 .allmytext .mytext p span {
+    display: block;
+  }
+  .about_us .col-lg-6 img {
+    position: absolute;
+    margin-top: 37%;
+    width: 82%;
+    height: 63%;
+    left: 13%;
+  }
+
+  .our_values {
+    background-color: #E8DFCE;
+    height: 75vh;
+  }
+  .our_values h2 {
+    text-align: center;
+    padding-top: 5%;
+    font-size: 50px;
+    padding-left: 5%;
+    margin-bottom: 3%;
+    font-weight: 350;
+  }
+  .our_values p {
+    text-align: center;
+    padding-left: 5%;
+    font-size: 16px;
+  }
+  .our_values .allcards {
+    width: 100%;
+    background-color: #E8DFCE;
+    margin-top: 5%;
+  }
+  .our_values .allcards .col-lg-3 .card {
+    background-color: #E8DFCE;
+    border: none;
+  }
+  .our_values .allcards .col-lg-3 .card .img-top {
+    margin: 0 auto;
+  }
+  .our_values .allcards .col-lg-3 .card .img-top img {
+    width: 100%;
+  }
+  .our_values .allcards .col-lg-3 .card .card-body {
+    text-align: center;
+  }
+  .our_values .allcards .col-lg-3 .card .card-body h4 {
+    font-size: 25px;
+    padding-bottom: 15px;
+    font-weight: 350;
+  }
+  .our_values .allcards .col-lg-3 .card .card-body p {
+    text-align: center;
+    font-size: 16px;
+  }
+  .our_values .allcards .col-lg-3 .card .card-body p span {
+    display: block;
+  }
+  .our_values .allcards .Honesty, .our_values .allcards .Value {
+    margin-top: 0%;
+  }
+
+  .Debut_team {
+    text-align: left;
+    padding-top: 5%;
+    margin: 0 7%;
+  }
+  .Debut_team .mytext1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 7%;
+    margin-top: 8%;
+  }
+  .Debut_team .mytext1 h2 {
+    font-size: 45px;
+    margin-bottom: 2%;
+    margin-left: -8%;
+  }
+  .Debut_team .mytext1 button {
+    background-color: #262626;
+    color: #E8DFCE;
+    height: 50px;
+    width: 170px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    top: 16%;
+    left: 77%;
+  }
+  .Debut_team p {
+    margin-bottom: 5%;
+  }
+  .Debut_team .row .col-lg-4 .card {
+    border: none;
+    margin-bottom: 10%;
+  }
+  .Debut_team .row .col-lg-4 .card h6 {
+    font-size: 20px;
+    line-height: 2.1;
+  }
+  .Debut_team .row .col-lg-4 .card p {
+    line-height: 1.4;
+  }
+  .Debut_team .row .col-lg-4 .card img {
+    width: 90%;
+  }
+  .Debut_team .row .col-lg-4 .card .images {
+    margin-top: 55px;
+  }
+  .Debut_team .row .col-lg-4 .card .img1 {
+    height: 140px;
+  }
+
+  .portfolio {
+    width: 97%;
+  }
+  .portfolio h2 {
+    font-size: 45px;
+    padding-top: 3%;
+    line-height: 3;
+  }
+  .portfolio p {
+    font-size: 20px;
+  }
+  .portfolio .row .col-lg-6 {
+    position: relative;
+  }
+  .portfolio .row .col-lg-6 .mytext2 {
+    padding-left: 12%;
+    margin-top: 24%;
+  }
+  .portfolio .row .col-lg-6 .mytext2 h4 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+  .portfolio .row .col-lg-6 .mytext2 p {
+    font-size: 16px;
+    line-height: 2;
+    padding-bottom: 20px;
+  }
+  .portfolio .row .col-lg-6 .mytext2 p span {
+    display: block;
+  }
+  .portfolio .row .col-lg-6 img {
+    position: absolute;
+    right: 1%;
+    top: 12%;
+  }
+
+  .get_in_touch {
+    width: 97%;
+    height: 40vh;
+    margin-top: 0%;
+    position: relative;
+  }
+  .get_in_touch .row .mytext {
+    padding-left: 15%;
+    position: absolute;
+    top: 29%;
+  }
+  .get_in_touch .row .mytext h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  .get_in_touch .row .mytext p {
+    font-size: 17px;
+    line-height: 2;
+  }
+  .get_in_touch .row .mytext p span {
+    display: block;
+  }
+  .get_in_touch .row .mytext button {
+    margin-top: 10%;
+    background-color: #262626;
+    color: #E8DFCE;
+    height: 50px;
+    width: 170px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  .get_in_touch .row img {
+    display: block;
+    width: 197%;
+    margin-left: -8%;
+  }
+  .get_in_touch .row .image2 {
+    position: absolute;
+    top: 10%;
+    height: 90%;
+    width: 105%;
+    left: 3%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header {
+    width: 100%;
+    position: absolute;
+    height: 10vh;
+  }
+  header .navbar {
+    z-index: 2;
+    margin: 0% 7%;
+  }
+  header .navbar .nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  header .navbar .nav li a {
+    color: #262626;
+    font-size: 25px;
+  }
+
+  .banner {
+    height: 80vh;
+  }
+  .banner .banner_image {
+    width: 100%;
+  }
+  .banner .banner_image img {
+    width: 100%;
+    height: 80vh;
+  }
+  .banner .banner_image .banner_text {
+    position: absolute;
+    top: 22%;
+    left: 23%;
+    z-index: 2;
+  }
+  .banner .banner_image .banner_text h1 {
+    font-size: 60px;
+  }
+  .banner .banner_image .banner_text h1 span {
+    display: block;
+  }
+  .banner .overlay {
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    z-index: 1;
+  }
+  .banner .overlay img {
+    width: 100%;
+    height: 80vh;
+  }
+  .banner .butterfly_image {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    z-index: 2;
+  }
+  .banner .butterfly_image img {
+    width: 60%;
+  }
+
+  .about_us {
+    margin-top: 22%;
+  }
+  .about_us .col-lg-6 {
+    position: relative;
+  }
+  .about_us .col-lg-6 .allmytext {
+    padding-left: 13%;
+  }
+  .about_us .col-lg-6 .allmytext h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .about_us .col-lg-6 .allmytext .mytext h5 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+  }
+  .about_us .col-lg-6 .allmytext .mytext p {
+    font-size: 20px;
+    line-height: 1.8;
+    padding-bottom: 60px;
+  }
+  .about_us .col-lg-6 .allmytext .mytext p span {
+    display: block;
+  }
+  .about_us .col-lg-6 img {
+    position: absolute;
+    margin-top: 4%;
+    width: 90%;
+    height: 90%;
+    left: 9%;
+  }
+
+  .our_values {
+    background-color: #E8DFCE;
+    height: 90vh;
+  }
+  .our_values h2 {
+    padding-top: 3%;
+    font-size: 50px;
+    padding-left: 5%;
+    margin-bottom: 3%;
+    font-weight: 350;
+  }
+  .our_values p {
+    padding-left: 5%;
+    font-size: 16px;
+  }
+  .our_values .allcards {
+    background-color: #E8DFCE;
+    margin-top: 5%;
+  }
+  .our_values .allcards .col-lg-3 .card {
+    background-color: #E8DFCE;
+    border: none;
+  }
+  .our_values .allcards .col-lg-3 .card .img-top {
+    margin: 0 auto;
+  }
+  .our_values .allcards .col-lg-3 .card .img-top img {
+    width: 100%;
+  }
+  .our_values .allcards .col-lg-3 .card .card-body {
+    text-align: center;
+  }
+  .our_values .allcards .col-lg-3 .card .card-body h4 {
+    font-size: 25px;
+    padding-bottom: 15px;
+    font-weight: 350;
+  }
+  .our_values .allcards .col-lg-3 .card .card-body p {
+    font-size: 16px;
+  }
+  .our_values .allcards .col-lg-3 .card .card-body p span {
+    display: block;
+  }
+  .our_values .allcards .Honesty, .our_values .allcards .Value {
+    margin-top: 10%;
+  }
+
+  .Debut_team {
+    margin: 0 7%;
+    padding-top: 6%;
+  }
+  .Debut_team .mytext1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 7%;
+    margin-top: 8%;
+  }
+  .Debut_team .mytext1 h2 {
+    font-size: 45px;
+    margin-bottom: 2%;
+    margin-left: -8%;
+  }
+  .Debut_team .mytext1 button {
+    background-color: #262626;
+    color: #E8DFCE;
+    height: 50px;
+    top: 21%;
+    width: 170px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+  }
+  .Debut_team p {
+    margin-bottom: 5%;
+  }
+  .Debut_team .row .col-lg-4 .card {
+    border: none;
+    margin-bottom: 10%;
+  }
+  .Debut_team .row .col-lg-4 .card h6 {
+    font-size: 20px;
+    line-height: 2.1;
+  }
+  .Debut_team .row .col-lg-4 .card p {
+    line-height: 1.4;
+  }
+  .Debut_team .row .col-lg-4 .card img {
+    width: 90%;
+  }
+  .Debut_team .row .col-lg-4 .card .images {
+    margin-top: 43px;
+  }
+  .Debut_team .row .col-lg-4 .card .img1 {
+    height: 218px;
+  }
+
+  .portfolio h2 {
+    font-size: 45px;
+    padding-top: 3%;
+    line-height: 3;
+  }
+  .portfolio p {
+    font-size: 20px;
+  }
+  .portfolio .row .col-lg-6 {
+    position: relative;
+  }
+  .portfolio .row .col-lg-6 .mytext2 {
+    padding-left: 17%;
+    margin-top: 24%;
+  }
+  .portfolio .row .col-lg-6 .mytext2 h4 {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+  .portfolio .row .col-lg-6 .mytext2 p {
+    font-size: 22px;
+    line-height: 2;
+    padding-bottom: 20px;
+  }
+  .portfolio .row .col-lg-6 .mytext2 p span {
+    display: block;
+  }
+  .portfolio .row .col-lg-6 img {
+    position: absolute;
+    right: 5%;
+  }
+
+  .get_in_touch {
+    height: 40vh;
+    margin-top: 25%;
+    position: relative;
+  }
+  .get_in_touch .row .mytext {
+    padding-left: 15%;
+    position: absolute;
+    top: 40%;
+  }
+  .get_in_touch .row .mytext h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  .get_in_touch .row .mytext p {
+    font-size: 17px;
+    line-height: 2;
+  }
+  .get_in_touch .row .mytext p span {
+    display: block;
+  }
+  .get_in_touch .row .mytext button {
+    margin-top: 10%;
+    background-color: #262626;
+    color: #E8DFCE;
+    height: 50px;
+    width: 170px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  .get_in_touch .row img {
+    position: absolute;
+    top: 10%;
+    height: 80%;
+  }
+  .get_in_touch .row .image2 {
+    position: absolute;
+    top: 10%;
+    height: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */
