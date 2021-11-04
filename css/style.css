@@ -138,8 +138,12 @@ table {
   font-family: Akti;
   src: url(../fonts/AktivGroteskCorp-Regular.ttf);
 }
+body {
+  overflow-x: hidden;
+}
+
 header {
-  width: 100%;
+  width: 97%;
   position: absolute;
   height: 10vh;
 }
@@ -157,9 +161,92 @@ header .navbar .nav li a {
   color: #262626;
   font-size: 25px;
 }
+header .hamburgers {
+  z-index: 3;
+  position: absolute;
+}
+header .hamburgers #menu__toggle {
+  opacity: 0;
+}
+header .hamburgers #menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+header .hamburgers #menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+header .hamburgers #menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+header .hamburgers #menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+header .hamburgers .menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 11px;
+  left: 87%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 3;
+}
+header .hamburgers .menu__btn > span,
+header .hamburgers .menu__btn > span::before,
+header .hamburgers .menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: 0.25s;
+}
+header .hamburgers .menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+header .hamburgers .menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+header .hamburgers .menu__box {
+  text-align: center;
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: #e8dfce;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.25s;
+}
+header .hamburgers .menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+header .hamburgers .menu__item:hover {
+  background-color: #cfd8dc;
+}
 
 .banner {
+  height: 70vh;
   width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 .banner .banner_image img {
   width: 100%;
@@ -197,9 +284,6 @@ header .navbar .nav li a {
   width: 100%;
 }
 
-.about_us {
-  margin-top: 40%;
-}
 .about_us .col-lg-6 {
   position: relative;
 }
@@ -208,7 +292,7 @@ header .navbar .nav li a {
   padding-left: 0%;
 }
 .about_us .col-lg-6 .allmytext h2 {
-  font-size: 50px;
+  font-size: 35px;
   margin-bottom: 30px;
 }
 .about_us .col-lg-6 .allmytext .mytext h5 {
@@ -217,7 +301,7 @@ header .navbar .nav li a {
   font-weight: lighter;
 }
 .about_us .col-lg-6 .allmytext .mytext p {
-  font-size: 20px;
+  font-size: 13px;
   line-height: 1.8;
   padding-bottom: 60px;
 }
@@ -233,27 +317,27 @@ header .navbar .nav li a {
 }
 
 .our_values {
-  background-color: #E8DFCE;
+  background-color: #e8dfce;
   height: 90vh;
 }
 .our_values h2 {
-  padding-top: 3%;
-  font-size: 50px;
-  padding-left: 5%;
-  margin-bottom: 3%;
+  padding-top: 14%;
+  font-size: 35px;
+  padding-left: 23%;
+  margin-bottom: 14%;
   font-weight: 350;
 }
 .our_values p {
-  font-size: 16px;
+  font-size: 13px;
   padding: 0 5px;
   text-align: center;
 }
 .our_values .allcards {
-  background-color: #E8DFCE;
+  background-color: #e8dfce;
   margin-top: 5%;
 }
 .our_values .allcards .col-lg-3 .card {
-  background-color: #E8DFCE;
+  background-color: #e8dfce;
   border: none;
 }
 .our_values .allcards .col-lg-3 .card .img-top {
@@ -271,12 +355,13 @@ header .navbar .nav li a {
   font-weight: 350;
 }
 .our_values .allcards .col-lg-3 .card .card-body p {
-  font-size: 16px;
+  font-size: 13px;
 }
 .our_values .allcards .col-lg-3 .card .card-body p span {
-  display: block;
+  display: inline-table;
 }
-.our_values .allcards .Honesty, .our_values .allcards .Value {
+.our_values .allcards .Honesty,
+.our_values .allcards .Value {
   margin-top: 10%;
 }
 
@@ -294,13 +379,13 @@ header .navbar .nav li a {
 }
 .Debut_team .mytext1 h2 {
   font-size: 45px;
-  margin-bottom: 2%;
-  margin-left: -8%;
+  margin-bottom: 14%;
+  margin-left: -4%;
 }
 .Debut_team .mytext1 button {
   position: absolute;
   background-color: #262626;
-  color: #E8DFCE;
+  color: #e8dfce;
   height: 50px;
   width: 170px;
   font-size: 20px;
@@ -312,6 +397,7 @@ header .navbar .nav li a {
 }
 .Debut_team p {
   margin-bottom: 5%;
+  font-size: 13px;
 }
 .Debut_team .row .col-lg-4 .card {
   border: none;
@@ -326,7 +412,8 @@ header .navbar .nav li a {
   padding-bottom: 10px;
 }
 .Debut_team .row .col-lg-4 .card img {
-  width: 90%;
+  width: 103%;
+  height: 249px;
 }
 .Debut_team .row .col-lg-4 .card .images {
   margin-top: 43px;
@@ -348,6 +435,7 @@ header .navbar .nav li a {
 }
 .portfolio .row .col-lg-6 {
   position: relative;
+  height: 413px;
 }
 .portfolio .row .col-lg-6 .mytext2 {
   padding-left: 0%;
@@ -358,7 +446,7 @@ header .navbar .nav li a {
   padding-bottom: 15px;
 }
 .portfolio .row .col-lg-6 .mytext2 p {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 2;
   padding-bottom: 20px;
 }
@@ -367,13 +455,15 @@ header .navbar .nav li a {
 }
 .portfolio .row .col-lg-6 img {
   position: absolute;
-  right: -1%;
-  width: 104%;
+  right: -10%;
+  width: 120%;
+  height: 451px;
+  top: -63%;
 }
 
 .get_in_touch {
   height: 40vh;
-  margin-top: 121%;
+  margin-top: -75%;
   position: relative;
 }
 .get_in_touch .row .mytext {
@@ -382,11 +472,12 @@ header .navbar .nav li a {
   top: 40%;
 }
 .get_in_touch .row .mytext h2 {
-  font-size: 45px;
+  font-size: 35px;
+  margin-left: 10%;
   margin-bottom: 20px;
 }
 .get_in_touch .row .mytext p {
-  font-size: 17px;
+  font-size: 13px;
   line-height: 2;
 }
 .get_in_touch .row .mytext p span {
@@ -395,12 +486,14 @@ header .navbar .nav li a {
 .get_in_touch .row .mytext button {
   margin-top: 10%;
   background-color: #262626;
-  color: #E8DFCE;
+  color: #e8dfce;
   height: 50px;
   width: 170px;
   font-size: 20px;
   border: none;
   border-radius: 10px;
+  margin-bottom: 30px;
+  margin-left: 16%;
   margin-bottom: 30px;
 }
 .get_in_touch .row .image2 {
@@ -410,6 +503,109 @@ header .navbar .nav li a {
 }
 .get_in_touch .row img {
   display: none;
+}
+
+.footer {
+  background-color: #000;
+  height: auto;
+  margin-top: 45%;
+  width: 100%;
+}
+.footer .first_col img {
+  margin-top: 12%;
+  margin-left: 30%;
+  width: 46%;
+}
+.footer .first_col p {
+  margin-left: 15%;
+  line-height: 2;
+  color: #e8dfce;
+  font-size: 13px;
+}
+.footer .first_col p span {
+  display: block;
+}
+.footer .first_col .allcircle {
+  display: flex;
+  margin-left: 13%;
+  margin-top: 9%;
+}
+.footer .first_col .allcircle .circle {
+  margin-left: 5%;
+  width: 40px;
+  height: 40px;
+  background-color: #e8dfce;
+  border-radius: 50%;
+  position: relative;
+}
+.footer .first_col .allcircle .circle i {
+  position: absolute;
+  left: 17%;
+  top: 18%;
+  color: #000;
+  font-size: 25px;
+}
+.footer .first_col .allcircle .circle .face {
+  position: absolute;
+  left: 31%;
+  top: 18%;
+}
+.footer .col-lg-4 h3 {
+  margin-top: 8%;
+  margin-left: 13%;
+  color: #e8dfce;
+  font-size: 35px;
+}
+.footer .col-lg-4 .div {
+  display: flex;
+  margin-left: 13%;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+.footer .col-lg-4 .div i {
+  font-size: 25px;
+  color: #e8dfce;
+}
+.footer .col-lg-4 .div p {
+  margin-left: 5%;
+  color: #e8dfce;
+  font-size: 20px;
+}
+.footer .col-lg-4 .div p span {
+  display: block;
+  line-height: 2;
+}
+.footer .col-lg-4 ul {
+  margin-left: 17%;
+  margin-top: 5%;
+}
+.footer .col-lg-4 ul li {
+  color: #e8dfce;
+  font-size: 20px;
+  line-height: 2;
+}
+.footer .col-lg-4 ul li span i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.footer .line {
+  width: 85%;
+  height: 1px;
+  background-color: #e8dfce;
+  margin-top: 6%;
+  margin-left: 6%;
+  margin-bottom: 7%;
+}
+.footer .footer-text {
+  color: #e8dfce;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15%;
+  margin-top: 2%;
+}
+.footer .footer-text p {
+  padding-bottom: 15%;
+  font-size: 13px;
 }
 
 @media screen and (min-width: 768px) {
@@ -433,6 +629,9 @@ header .navbar .nav li a {
   header .navbar .nav li a {
     color: #262626;
     font-size: 25px;
+  }
+  header .hamburgers {
+    display: none;
   }
 
   .banner {
@@ -508,7 +707,7 @@ header .navbar .nav li a {
   }
 
   .our_values {
-    background-color: #E8DFCE;
+    background-color: #e8dfce;
     height: 75vh;
   }
   .our_values h2 {
@@ -526,11 +725,11 @@ header .navbar .nav li a {
   }
   .our_values .allcards {
     width: 100%;
-    background-color: #E8DFCE;
+    background-color: #e8dfce;
     margin-top: 5%;
   }
   .our_values .allcards .col-lg-3 .card {
-    background-color: #E8DFCE;
+    background-color: #e8dfce;
     border: none;
   }
   .our_values .allcards .col-lg-3 .card .img-top {
@@ -554,7 +753,8 @@ header .navbar .nav li a {
   .our_values .allcards .col-lg-3 .card .card-body p span {
     display: block;
   }
-  .our_values .allcards .Honesty, .our_values .allcards .Value {
+  .our_values .allcards .Honesty,
+.our_values .allcards .Value {
     margin-top: 0%;
   }
 
@@ -576,7 +776,7 @@ header .navbar .nav li a {
   }
   .Debut_team .mytext1 button {
     background-color: #262626;
-    color: #E8DFCE;
+    color: #e8dfce;
     height: 50px;
     width: 170px;
     font-size: 20px;
@@ -670,7 +870,7 @@ header .navbar .nav li a {
   .get_in_touch .row .mytext button {
     margin-top: 10%;
     background-color: #262626;
-    color: #E8DFCE;
+    color: #e8dfce;
     height: 50px;
     width: 170px;
     font-size: 20px;
@@ -689,6 +889,104 @@ header .navbar .nav li a {
     height: 90%;
     width: 105%;
     left: 3%;
+  }
+
+  .footer {
+    background-color: #000;
+    height: 50vh;
+    margin-top: 10%;
+  }
+  .footer .first_col img {
+    margin-top: 12%;
+    margin-left: 21%;
+    width: 52%;
+  }
+  .footer .first_col p {
+    margin-left: 9%;
+    line-height: 2;
+    color: #e8dfce;
+  }
+  .footer .first_col p span {
+    display: block;
+  }
+  .footer .first_col .allcircle {
+    display: flex;
+    margin-left: 5%;
+    margin-top: 4%;
+  }
+  .footer .first_col .allcircle .circle {
+    margin-left: 5%;
+    width: 35px;
+    height: 35px;
+    background-color: #e8dfce;
+    border-radius: 50%;
+    position: relative;
+  }
+  .footer .first_col .allcircle .circle i {
+    position: absolute;
+    left: 17%;
+    top: 18%;
+    color: #000;
+    font-size: 25px;
+  }
+  .footer .first_col .allcircle .circle .face {
+    position: absolute;
+    left: 31%;
+    top: 18%;
+  }
+  .footer .col-lg-4 h3 {
+    margin-top: 22%;
+    margin-left: 7%;
+    color: #e8dfce;
+    font-size: 25px;
+  }
+  .footer .col-lg-4 .div {
+    display: flex;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    margin-top: 17%;
+  }
+  .footer .col-lg-4 .div i {
+    font-size: 25px;
+    color: #e8dfce;
+  }
+  .footer .col-lg-4 .div p {
+    margin-left: 5%;
+    color: #e8dfce;
+  }
+  .footer .col-lg-4 .div p span {
+    display: block;
+    line-height: 2;
+  }
+  .footer .col-lg-4 ul {
+    margin-left: 23%;
+    margin-top: 5%;
+  }
+  .footer .col-lg-4 ul li {
+    color: #e8dfce;
+    font-size: 20px;
+    line-height: 2;
+  }
+  .footer .col-lg-4 ul li span i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .footer .line {
+    width: 85%;
+    height: 1 px;
+    background-color: #e8dfce;
+    margin-top: 9%;
+    margin-left: 6%;
+  }
+  .footer .footer-text {
+    color: #e8dfce;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12%;
+    margin-top: 2%;
+  }
+  .footer .footer-text p {
+    padding-bottom: 0%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -788,7 +1086,7 @@ header .navbar .nav li a {
   }
 
   .our_values {
-    background-color: #E8DFCE;
+    background-color: #e8dfce;
     height: 90vh;
   }
   .our_values h2 {
@@ -803,11 +1101,11 @@ header .navbar .nav li a {
     font-size: 16px;
   }
   .our_values .allcards {
-    background-color: #E8DFCE;
+    background-color: #e8dfce;
     margin-top: 5%;
   }
   .our_values .allcards .col-lg-3 .card {
-    background-color: #E8DFCE;
+    background-color: #e8dfce;
     border: none;
   }
   .our_values .allcards .col-lg-3 .card .img-top {
@@ -830,7 +1128,8 @@ header .navbar .nav li a {
   .our_values .allcards .col-lg-3 .card .card-body p span {
     display: block;
   }
-  .our_values .allcards .Honesty, .our_values .allcards .Value {
+  .our_values .allcards .Honesty,
+.our_values .allcards .Value {
     margin-top: 10%;
   }
 
@@ -851,7 +1150,7 @@ header .navbar .nav li a {
   }
   .Debut_team .mytext1 button {
     background-color: #262626;
-    color: #E8DFCE;
+    color: #e8dfce;
     height: 50px;
     top: 21%;
     width: 170px;
@@ -898,6 +1197,25 @@ header .navbar .nav li a {
     padding-left: 17%;
     margin-top: 24%;
   }
+  .portfolio .row .col-lg-6 .mytext2 .arrows {
+    width: 50px;
+    height: 50px;
+    background-color: #e8dfce;
+  }
+  .portfolio .row .col-lg-6 .mytext2 .arrows i {
+    font-size: 35px;
+    margin-top: 2px;
+  }
+  .portfolio .row .col-lg-6 .mytext2 .lefts {
+    position: absolute;
+    left: 149%;
+    z-index: 99;
+  }
+  .portfolio .row .col-lg-6 .mytext2 .rights {
+    position: absolute;
+    left: 159%;
+    z-index: 99;
+  }
   .portfolio .row .col-lg-6 .mytext2 h4 {
     font-size: 30px;
     padding-bottom: 15px;
@@ -914,16 +1232,20 @@ header .navbar .nav li a {
     position: absolute;
     right: 5%;
   }
+  .portfolio .row .colimg {
+    height: 560px;
+    margin-left: 56%;
+    margin-top: -43%;
+  }
 
   .get_in_touch {
-    height: 40vh;
-    margin-top: 25%;
+    margin-top: 15%;
     position: relative;
   }
   .get_in_touch .row .mytext {
-    padding-left: 15%;
+    padding-left: 10%;
     position: absolute;
-    top: 40%;
+    top: 27%;
   }
   .get_in_touch .row .mytext h2 {
     font-size: 45px;
@@ -939,7 +1261,7 @@ header .navbar .nav li a {
   .get_in_touch .row .mytext button {
     margin-top: 10%;
     background-color: #262626;
-    color: #E8DFCE;
+    color: #e8dfce;
     height: 50px;
     width: 170px;
     font-size: 20px;
@@ -948,13 +1270,106 @@ header .navbar .nav li a {
     margin-bottom: 30px;
   }
   .get_in_touch .row img {
-    position: absolute;
     top: 10%;
-    height: 80%;
+    height: 70%;
   }
   .get_in_touch .row .image2 {
+    top: 0%;
+    left: 7%;
+    height: 70%;
+  }
+
+  .footer {
+    background-color: #000;
+    height: 68vh;
+    margin-top: 22%;
+  }
+  .footer .first_col img {
+    margin-top: 12%;
+    margin-left: 15%;
+  }
+  .footer .first_col p {
+    margin-left: 13%;
+    line-height: 2;
+    color: #e8dfce;
+  }
+  .footer .first_col p span {
+    display: block;
+  }
+  .footer .first_col .allcircle {
+    display: flex;
+    margin-left: 13%;
+    margin-top: 4%;
+  }
+  .footer .first_col .allcircle .circle {
+    margin-left: 5%;
+    width: 40px;
+    height: 40px;
+    background-color: #e8dfce;
+    border-radius: 50%;
+    position: relative;
+  }
+  .footer .first_col .allcircle .circle i {
     position: absolute;
-    top: 10%;
-    height: 80%;
+    left: 17%;
+    top: 18%;
+    color: #000;
+    font-size: 25px;
+  }
+  .footer .first_col .allcircle .circle .face {
+    position: absolute;
+    left: 31%;
+    top: 18%;
+  }
+  .footer .col-lg-4 h3 {
+    margin-top: 22%;
+    margin-left: 22%;
+    color: #e8dfce;
+    font-size: 35px;
+  }
+  .footer .col-lg-4 .div {
+    display: flex;
+    margin-left: 22%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .footer .col-lg-4 .div i {
+    font-size: 25px;
+    color: #e8dfce;
+  }
+  .footer .col-lg-4 .div p {
+    margin-left: 5%;
+    color: #e8dfce;
+  }
+  .footer .col-lg-4 .div p span {
+    display: block;
+    line-height: 2;
+  }
+  .footer .col-lg-4 ul {
+    margin-left: 23%;
+    margin-top: 5%;
+  }
+  .footer .col-lg-4 ul li {
+    color: #e8dfce;
+    font-size: 20px;
+    line-height: 2;
+  }
+  .footer .col-lg-4 ul li span i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .footer .line {
+    width: 85%;
+    height: 1px;
+    background-color: #e8dfce;
+    margin-top: 3%;
+    margin-left: 6%;
+  }
+  .footer .footer-text {
+    color: #e8dfce;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 12%;
+    margin-top: -5%;
   }
 }/*# sourceMappingURL=style.css.map */
